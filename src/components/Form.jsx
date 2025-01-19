@@ -18,17 +18,17 @@ const Form = ({handleSubmitdata}) => {
       className="flex justify-center items-center gap-10"
       action=""
     >
-      <input  {...register('name')}
+      <input  required {...register('name')}
         className="rounded-md h-12 w-1152  p-2 border border-black"
         type="text"
         placeholder="Name"
       />
-      <input {...register('profession')}
+      <input required {...register('profession')}
         className="rounded-md h-12 w-52  p-2 border border-black"
         type="text"
         placeholder="Profession"
       />
-      <input {...register('email')}
+      <input required {...register('email')}
         className="rounded-md h-12 w-52  p-2 border border-black"
         type="email"
         placeholder="Email"
@@ -38,7 +38,7 @@ const Form = ({handleSubmitdata}) => {
         type="text"
         placeholder="Image Url"
       />
-      <input 
+      <input  
         className=" text-white bg-blue-500 h-12 w-32 rounded-lg"
         type="submit"
         value="Submit"
