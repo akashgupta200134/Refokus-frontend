@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-    <div className="flex items-center justify-center h-screen w-full bg-zinc-100">
+    <div className="">
 <Cards/>
 
     </div>
