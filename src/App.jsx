@@ -5,6 +5,7 @@ import Stripes from "./components/Stripes";
 import Products from "./components/Products";
 import Markees from "./components/Markees";
 import Cards from "./components/Cards";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -15,6 +16,8 @@ const App = () => {
       <Products/>
       <Markees/>
       <Cards/>
+      <Footer/>
+      
     </div>
   );
 };
