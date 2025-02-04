@@ -28,12 +28,11 @@ const Markees = () => {
   ];
 
   return (
-    <div className="py-20 mt-10">
-      {markeeData.map((items, index) => (
-        <Markeee key={index}  data={items} />
-      ))}
-
-    </div>
+    <div className="py-20 mt-32 w-full relative overflow-hidden">
+    {markeeData.map((items, index) => (
+      <Markeee key={index} direction={index===0 ? "left" : "right"} data={items} />
+    ))}
+  </div>
   );
 };
 

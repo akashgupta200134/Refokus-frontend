@@ -1,17 +1,34 @@
+import { motion } from 'framer-motion'
 import React from 'react'
 
-const Markeee = ({data}) => {
+const Markeee = ({data , direction}) => {
+
+
+
   return (
-    <div className=' w-full py-8  flex items-center  whitespace-nowrap  overflow-hidden justify-between gap-10'>
-    {data.map((items , index ) =>(
-        <img className='w-[6vw] flex-shrink-0 ' src={items} key={index} />
-    ))}
-    {data.map((items , index ) =>(
-        <img className='w-[6vw] flex-shrink-0 ' src={items} key={index} />
-    ))}
-
-
-    </div>
+    <div className="flex w-full overflow-hidden">
+    <motion.div
+      initial={{ x: direction === "left" ? "0" : "-100%" }}
+      animate={{ x: direction === "left" ? "-100%" : "0" }}
+      transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
+      className="flex flex-shrink-0 gap-40 py-10 pr-40"
+    >
+      {data.map((items, index) => (
+        <img key={index} src={items} className="" />
+      ))}
+    </motion.div>
+    
+    <motion.div
+      initial={{ x: direction === "left" ? "0" : "-100%" }}
+      animate={{ x: direction === "left" ? "-100%" : "0" }}
+      transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
+      className="flex flex-shrink-0 gap-40 py-10 pr-40"
+    >
+      {data.map((items, index) => (
+        <img key={index} src={items} className="" />
+      ))}
+    </motion.div>
+  </div>
   )
 }
 

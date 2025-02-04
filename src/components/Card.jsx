@@ -1,39 +1,44 @@
+/* eslint-disable react/prop-types */
+import { motion } from "framer-motion";
 import React from "react";
-import { IoIosArrowRoundForward } from "react-icons/io";
+import { FaArrowRightLong } from "react-icons/fa6";
 
-const Card = ({ width, start, para , hover}) => {
+function Card({ width, start, para, hover = "false" }) {
   return (
-    <div className={`bg-zinc-800 p-5 rounded-xl ${width}  min-h-[30rem] flex flex-col justify-between hover:${hover}`}>
-      <div className=" w-full">
-        <div className=" w-full flex items-center justify-between">
-          <h3> one Heading</h3>
-          <IoIosArrowRoundForward />
+    <motion.div
+      whileHover={{
+        backgroundColor: hover === "true" && "#7443ff",
+        padding: "25px",
+      }}
+      className={`bg-zinc-800 p-5 rounded-xl hover:${hover} ${width} min-h-[30rem] flex flex-col justify-between`}
+    >
+      <div className="w-full">
+        <div className="w-full flex justify-between text-zinc-200 items-center">
+          <h3>One Heading</h3>
+          <FaArrowRightLong />
         </div>
-
-        <h1 className=" font-medium mt-5 text-3xl ">Whatever Heading</h1>
+        <h1 className="text-3xl text-zinc-300 font-medium mt-5">whatever heading</h1>
       </div>
-
-      <div className="downwala w-full  ">
+      <div className="down w-full">
         {start && (
           <>
-            <h1 className=" text-6xl  font-semibold tracking-tight leading-none">
-              {" "}
-              Start a project{" "}
+            <h1 className=" text-white text-8xl font-semi-bold tracking-tight leading-none">
+              Start a Project
             </h1>
-            <button className=" border-[1px] mt-5 border-zinc-50 rounded-full px-5 py-2">
-              Contact us
+            <button className="rounded-full py-2 px-5 mt-5 border text-white border-zinc-50">
+              Contact Us
             </button>
           </>
         )}
 
         {para && (
-          <p className="text-sm font-medium text-zinc-700">
-            Lorem ipsum dolor sit amet.
+          <p className="text-sm text-zinc-500 font-medium">
+            Lorem ipsum dolor sit amet consectetur.
           </p>
         )}
       </div>
-    </div>
+    </motion.div>
   );
-};
+}
 
 export default Card;
