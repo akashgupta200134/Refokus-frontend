@@ -14,9 +14,10 @@ const Markeee = ({data , direction}) => {
       className="flex flex-shrink-0 gap-40 py-10 pr-40"
     >
       {data.map((items, index) => (
-        <img key={index} src={items} className="" />
+        <img key={index} src={items} />
       ))}
     </motion.div>
+    
     
     <motion.div
       initial={{ x: direction === "left" ? "0" : "-100%" }}
@@ -28,6 +29,9 @@ const Markeee = ({data , direction}) => {
         <img key={index} src={items} className="" />
       ))}
     </motion.div>
+
+
+
   </div>
   )
 }
