@@ -53,7 +53,6 @@ const Work = () => {
       )
     );
   }
-  
 
   scrollYProgress.on("change", (data) => {
     const progress = Math.floor(data * 100);

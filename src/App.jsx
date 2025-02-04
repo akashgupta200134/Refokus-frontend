@@ -6,30 +6,21 @@ import Products from "./components/Products";
 import Markees from "./components/Markees";
 import Cards from "./components/Cards";
 import Footer from "./components/Footer";
-import LocomotiveScroll from 'locomotive-scroll';
-import { motion } from "framer-motion";  
-
-
-
-
+import LocomotiveScroll from "locomotive-scroll";
 
 const App = () => {
-
-const locomotiveScroll = new LocomotiveScroll();
-
-
-
+  
+  const locomotiveScroll = new LocomotiveScroll();
 
   return (
     <div className="font-regular w-full min-h-screen bg-zinc-900">
       <Navbar />
-      <Work/>
+      <Work />
       <Stripes />
-      <Products/>
-      <Markees/>
-      <Cards/>
-      <Footer/>
-
+      <Products />
+      <Markees />
+      <Cards />
+      <Footer />
     </div>
   );
 };
